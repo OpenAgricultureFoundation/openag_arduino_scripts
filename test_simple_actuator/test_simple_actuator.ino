@@ -36,7 +36,7 @@ void setup() {
   /************** CHANGE THESE **************/
   heater1.set("OFF");
   redLED.set("OFF");
-  whiteLED.set("ON");
+  whiteLED.set("OFF");
   blueLED.set("OFF");
   chamberFan.set("OFF");
   circulationPump.set("OFF");
