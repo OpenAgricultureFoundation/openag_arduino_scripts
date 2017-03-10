@@ -31,7 +31,7 @@ void setup() {
   /************** CHANGE THESE **************/
   heater1.set("OFF"); // K1
   redLED.set("OFF"); // K2
-  whiteLED.set("ON"); // K3
+  whiteLED.set("OFF"); // K3
   blueLED.set("OFF"); // K4
   chamberFan.set("OFF"); // K5
   circulationPump.set("OFF"); // K6
@@ -44,7 +44,7 @@ void setup() {
   phDownPump.set("OFF"); // K13, pump4, bottom left
   phUpPump.set("OFF"); // K14, pump3, center pump
   nutrientBPump.set("OFF"); // K15, pump2, top right
-  nutrientAPump.set("OFF"); // K16, pump1, top left
+  nutrientAPump.set("ON"); // K16, pump1, top left
 
   // Newer systems have tone version, older have pulse generator board
   chillerCompressor.set("OFF"); // D10
