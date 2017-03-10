@@ -13,4 +13,13 @@ class SimpleActuator {
     int _is_active_low;
 };
 
+class ChillerCompressorTone {
+  public:
+    ChillerCompressorTone(int pin);
+    void set(String s);
+
+  private:
+    int _pin;
+};
+
 #endif

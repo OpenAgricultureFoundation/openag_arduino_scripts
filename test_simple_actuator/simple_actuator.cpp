@@ -10,12 +10,24 @@ void SimpleActuator :: set(String s) {
   if (s == "ON") {
     digitalWrite(_pin, !_is_active_low);
   }
-  else if (s == "OFF") {
+  else {
     digitalWrite(_pin, _is_active_low);
   }
-  else {
-    Serial.begin(9600);
-    Serial.println("ERROR");
+}
+
+ChillerCompressorTone :: ChillerCompressorTone(int pin) {
+  _pin = pin;
+}
+
+void ChillerCompressorTone :: set(String s) {
+  if (s == "ON") {
+    unsigned int frequency = 140000; // hz
+    tone(_pin, frequency);
   }
 }
+
+
+
+
+
 

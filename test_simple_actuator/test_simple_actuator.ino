@@ -15,42 +15,40 @@ SimpleActuator airFlush(36, true); // K8
 SimpleActuator heater2(35, true); // K9
 SimpleActuator chillerPump(34, true); // K10
 SimpleActuator chillerFan(33, true); // K11
-SimpleActuator chillerCompressor(10, false); // pulse generator
-SimpleActuator waterPump(32, true); // K12, pump5
-SimpleActuator phDownPump(31, true); // K13, pump4
-SimpleActuator phUpPump(30, true); // K14, pump3
-SimpleActuator nutrientBPump(29, true); // K15, pump2
-SimpleActuator nutrientAPump(28, true); // K16, pump1
+SimpleActuator waterPump(32, true); // K12, pump5, bottom right
+SimpleActuator phDownPump(31, true); // K13, pump4, bottom left
+SimpleActuator phUpPump(30, true); // K14, pump3, center
+SimpleActuator nutrientBPump(29, true); // K15, pump2, top right
+SimpleActuator nutrientAPump(28, true); // K16, pump1, top left
 
+// Newer systems have tone version, older have pulse generator board
+SimpleActuator chillerCompressor(10, false); // D10 (pulse generator board)
+ChillerCompressorTone chillerCompressorTone(9); // D9 (arduino tone function)
 
 // Runs once
 void setup() {   
-  /***********DO NOT CHANGE THESE************/  
-  relayPower1.set("ON"); // ALWAYS LEAVE ON
-  relayPower2.set("ON"); // ALWAYS LEAVE ON
-  relayGround1.set("ON"); // ALWAYS LEAVE ON
-  relayGround2.set("ON"); // ALWAYS LEAVE ON
-  /******************************************/
-
   
   /************** CHANGE THESE **************/
-  heater1.set("OFF");
-  redLED.set("OFF");
-  whiteLED.set("OFF");
-  blueLED.set("OFF");
-  chamberFan.set("OFF");
-  circulationPump.set("OFF");
-  aerationPump.set("OFF");
-  airFlush.set("OFF");
-  heater2.set("OFF");
-  chillerPump.set("OFF");
-  chillerFan.set("OFF");
-  chillerCompressor.set("OFF");
-  waterPump.set("OFF");
-  phDownPump.set("OFF");
-  phUpPump.set("OFF");
-  nutrientBPump.set("OFF");
-  nutrientAPump.set("OFF");
+  heater1.set("OFF"); // K1
+  redLED.set("OFF"); // K2
+  whiteLED.set("ON"); // K3
+  blueLED.set("OFF"); // K4
+  chamberFan.set("OFF"); // K5
+  circulationPump.set("OFF"); // K6
+  aerationPump.set("OFF"); // K7
+  airFlush.set("OFF"); // K8
+  heater2.set("OFF"); // K9
+  chillerPump.set("OFF"); // K10
+  chillerFan.set("OFF"); // K11
+  waterPump.set("OFF"); // K12, pump5, bottom right
+  phDownPump.set("OFF"); // K13, pump4, bottom left
+  phUpPump.set("OFF"); // K14, pump3, center pump
+  nutrientBPump.set("OFF"); // K15, pump2, top right
+  nutrientAPump.set("OFF"); // K16, pump1, top left
+
+  // Newer systems have tone version, older have pulse generator board
+  chillerCompressor.set("OFF"); // D10
+  chillerCompressorTone.set("OFF"); // D9
   /****************************************/
 }
 
