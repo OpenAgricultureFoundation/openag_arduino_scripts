@@ -30,9 +30,9 @@ void setup() {
  
   /************** CHANGE THESE **************/
   heater1.set("OFF"); // K1
-  redLED.set("OFF"); // K2
+  redLED.set("ON"); // K2
   whiteLED.set("ON"); // K3
-  blueLED.set("OFF"); // K4
+  blueLED.set("ON"); // K4
   chamberFan.set("OFF"); // K5
   circulationPump.set("OFF"); // K6
   aerationPump.set("OFF"); // K7
