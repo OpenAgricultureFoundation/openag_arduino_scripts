@@ -38,7 +38,8 @@ void setup() {
 
   airFlush.set("ON"); // K8
 
-  chamberFan.set("OFF"); // K5
+  chamberFan.set("ON"); // K5
+ 
   heater1.set("OFF"); // K1
   heater2.set("OFF"); // K9
   chillerPump.set("OFF"); // K10
