@@ -29,14 +29,17 @@ ChillerCompressorTone chillerCompressorTone(9); // D9 (arduino tone function)
 void setup() {   
  
   /************** CHANGE THESE **************/
-  heater1.set("OFF"); // K1
   redLED.set("ON"); // K2
   whiteLED.set("ON"); // K3
   blueLED.set("ON"); // K4
-  chamberFan.set("ON"); // K5
-  circulationPump.set("OFF"); // K6
-  aerationPump.set("OFF"); // K7
-  airFlush.set("OFF"); // K8
+
+  circulationPump.set("ON"); // K6
+  aerationPump.set("ON"); // K7
+
+  airFlush.set("ON"); // K8
+
+  chamberFan.set("OFF"); // K5
+  heater1.set("OFF"); // K1
   heater2.set("OFF"); // K9
   chillerPump.set("OFF"); // K10
   chillerFan.set("OFF"); // K11
